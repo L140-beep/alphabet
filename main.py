@@ -82,36 +82,13 @@ def recognize(image):
     return result, distances
 
 
-image = plt.imread('./files/symbols.png')
+image = plt.imread('homework/alphabet/files/symbols.png')
 image = np.mean(image, 2)
 
-image[image == 1] = 0
 image[image > 0] = 1
-
-# labeled = label(image)
-
-
-
-
-
-# for region in regions:
-#     for prop in region:
-#         print(prop, region[prop])
-
-#     print('----------')
-    
-#     plt.imshow(region.image)
-#     plt.waitforbuttonpress(20)
-    
     
 result, distance = recognize(image)
 
-sum1 = 0
 for key in result.keys():
-    sum1 += result[key]
     print(key, result[key])
-
-print(sum1)
-
-#props = regionprops(labeled)
 
