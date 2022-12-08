@@ -82,7 +82,7 @@ def recognize(image):
     return result, distances
 
 
-image = plt.imread('homework/alphabet/files/symbols.png')
+image = plt.imread('./files/symbols.png')
 image = np.mean(image, 2)
 
 image[image > 0] = 1
